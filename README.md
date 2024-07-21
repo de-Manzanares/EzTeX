@@ -5,7 +5,7 @@
 </div>
 
 A concept for a sort of mathematical markdown language.
-EzTeX will allow you to write mathematical expressions with intuitive plain text, generating LaTeX code for you.
+EzTeX will allow you to write mathematical expressions with intuitive plain text, and generate LaTeX code for you.
 
 ## What are TeX and LaTeX?
 
@@ -50,5 +50,9 @@ EzTeX is designed with simplicity in mind - no fancy syntax or keywords, just st
 I am writing this for my friends who, in spite of my attempts at persuasion, see no need to learn LaTeX.
 After all, their lab reports don't have *too* much math in them.
 
-So far, we have a partial lexical analyzer.
-EzTeX is not yet functional - I still need to get around to writing the parser and code generator. 
+So far, we have a partial lexical analyzer and a partial translator ...
+Together, they make a partial source-to-source compiler! (transpiler)
+
+EzTeX can handle expressions void of parentheses and at most a single '/' character.
+EzTeX can also recognize all characters of the greek alphabet
+(excluding those characters with latin analogues e.g. A, B, E etc.).

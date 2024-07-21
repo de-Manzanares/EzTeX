@@ -12,9 +12,12 @@ using value = uint64_t;
 
 class Lexer {
  public:
-  explicit Lexer(std::string const &str);
+  explicit Lexer(std::string str = "");
   std::vector<Token> lex_tokens();
+  std::vector<Token> lex_tokens(std::string str);
+  std::vector<Token> lex_tokens(std::vector<std::string> strings);
 
+  void load_keywords();
   static std::unordered_map<std::string, Token_Type> keywords;
 
  private:

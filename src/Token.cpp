@@ -8,6 +8,8 @@ Token::Token(Token_Type const &token, std::string lexeme, std::string content,
       _content(std::move(content)), _line(line) {}
 
 std::string Token::to_string() const {
-  return std::to_string(static_cast<int>(_token_type)) + " " + _lexeme + " " +
-         _content;
+  if (_token_type != Token_Type::ezEOF) {
+    return _lexeme + " " + _content + " " + "line " + std::to_string(_line);
+  }
+  return "";
 }
